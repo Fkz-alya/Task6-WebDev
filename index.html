@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Computer Components Order Form</title>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <h1 class="header">Order Form for Computer Components</h1>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="form">
+                <div class="form-group">
+                    <label for="motherboard" class="form-label">Motherboard</label>
+                    <select class="form-control" id="motherboard">
+                        <option value="0" class="form-option">Select Motherboard</option>
+                        <option value="141.18" class="form-option">ASUS Prime B760M-K - $141.18</option>
+                        <option value="200" class="form-option">MSI Pro Z690-A - $200.00</option>
+                        <option value="294.12" class="form-option">Gigabyte Aorus X570 - $294.12</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="cpu" class="form-label">CPU</label>
+                    <select class="form-control" id="cpu">
+                        <option value="0" class="form-option">Select CPU</option>
+                        <option value="176.47" class="form-option">Intel i5 - $176.47</option>
+                        <option value="294.12" class="form-option">Intel i7 - $294.12</option>
+                        <option value="470.59" class="form-option">Intel i9 - $470.59</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="gpu" class="form-label">GPU</label>
+                    <select class="form-control" id="gpu">
+                        <option value="0" class="form-option">Select GPU</option>
+                        <option value="176.47" class="form-option">NVIDIA GTX 1650 - $176.47</option>
+                        <option value="411.76" class="form-option">NVIDIA RTX 2060 - $411.76</option>
+                        <option value="941.18" class="form-option">NVIDIA RTX 3080 - $941.18</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="ram" class="form-label">RAM</label>
+                    <select class="form-control" id="ram">
+                        <option value="0" class="form-option">Select RAM</option>
+                        <option value="47.06" class="form-option">8GB - $47.06</option>
+                        <option value="94.12" class="form-option">16GB - $94.12</option>
+                        <option value="176.47" class="form-option">32GB - $176.47</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="storage" class="form-label">Storage device</label>
+                    <select class="form-control" id="storage">
+                        <option value="0" class="form-option">Select Storage device</option>
+                        <option value="35.29" class="form-option">256GB SSD - $35.29</option>
+                        <option value="70.59" class="form-option">512GB SSD - $70.59</option>
+                        <option value="141.18" class="form-option">1TB SSD - $141.18</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <button type="button" class="btn" onclick="calculateTotal()">Calculate Total</button>
+                </div>
+            </div>
+
+            <div class="order-summary">
+                <h3>Order Summary</h3>
+                <div id="goods"></div>
+                <div class="total-price">
+                    Total Price: $<span id="total-price">0</span>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
